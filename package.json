@@ -16,7 +16,7 @@
     "API",
     "NODE"
   ],
-  "author": "Berend Weij",
+  "author": "Mitchell Vermaning",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/BerendWeij/md3_rest_node_16/issues"
@@ -24,7 +24,8 @@
   "dependencies": {
     "body-parser": "latest",
     "express": "latest",
-    "method-override": "latest"
+    "method-override": "latest",
+    "morgan": "latest"
   },
   "homepage": "https://github.com/BerendWeij/md3_rest_node_16#readme"
 }

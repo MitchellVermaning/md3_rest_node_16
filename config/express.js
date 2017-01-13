@@ -4,12 +4,15 @@
 var config = require('./config'),
     express = require('express'),
     bodyParser = require('body-parser'),
-    methodOverride = require('method-override');
+    methodOverride = require('method-override'),
+    morgan = require('morgan');
 
 module.exports = function() {
 
     /** create the express app */
     var app = express();
+
+    app.use(morgan('combined'));
 
     if (process.env.NODE_ENV === 'development') {
         /** hier gaan we straks specifieke development middleware koppelen (bijvoorbeeld een logger) */

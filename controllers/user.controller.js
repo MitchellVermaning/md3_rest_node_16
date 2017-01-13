@@ -3,6 +3,12 @@
  */
 var config = require('../config/config');
 
+var users = [
+    {name: "Berend"},
+    {name: "Hugo"},
+    {name: "Ingrid"}
+];
+
 /**
  * Create JSON response with the found user (req.user)
  */
@@ -10,18 +16,22 @@ exports.read = function(req, res) {
     res.json(req.user);
 };
 
+
+exports.mydefault = function(req, res){
+    res.json({error:'Geen optie gegeven'});
+};
+
+exports.mypost = function(req, res){
+    console.log("je hebt iets gepost. Dit is je antwoord");
+};
+
+
 /**
  * Create JSON response with all users
  */
 exports.list = function(req, res) {
 
     console.log("voor nu geven we altijd dezelfde lijst terug met users");
-
-    var users = [
-        {name: "Beren"},
-        {name: "Hugo"},
-        {name: "Ingrid"}
-    ];
 
     res.json(users);
 };
