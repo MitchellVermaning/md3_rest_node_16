@@ -24,8 +24,14 @@
   "dependencies": {
     "body-parser": "latest",
     "express": "latest",
+<<<<<<< HEAD
     "method-override": "latest",
     "morgan": "latest"
+=======
+    "morgan": "latest",
+    "method-override": "latest",
+    "mongoose": "latest"
+>>>>>>> BerendWeij/master
   },
   "homepage": "https://github.com/BerendWeij/md3_rest_node_16#readme"
 }
