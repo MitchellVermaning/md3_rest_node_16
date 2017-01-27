@@ -41,13 +41,6 @@ module.exports = function() {
         next();
     });
 
-    app.use(function (req, res, next) {
-
-        console.log(5);
-
-        next();
-    });
-
     /** Dit zorgt ervoor dat we bij de variabelen kunnen die gepost zijn zoals je in PHP bij $_POST mag */
     app.use(bodyParser.urlencoded({
         extended: true
@@ -62,6 +55,11 @@ module.exports = function() {
      * enable PUT/DELETE REST
      */
     app.use(methodOverride());
+
+    /**
+     * Good practise: req object for storing properties
+     */
+    app.request.md3 = {};
 
     /**
      * include all routing configuration
